@@ -23,7 +23,6 @@ pipeline{
             }
         }
 
-
     } // stages
 
     post {
