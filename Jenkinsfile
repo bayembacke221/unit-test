@@ -23,14 +23,7 @@ pipeline{
             }
         }
 
-        stage ('Approve Deployment') {
-            input {
-                message 'Do you want to proceed for deployment?'
-            }
-            steps {
-                    sh 'kubectl apply -f deployment.yaml'
-            }
-        }
+
     } // stages
 
     post {
