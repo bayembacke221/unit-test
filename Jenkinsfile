@@ -10,6 +10,11 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
+         stage('Clean packaw') {
+                    steps{
+                        sh 'mvn clean package'
+                    }
+                }
 
         stage ('Build') {
             steps{
