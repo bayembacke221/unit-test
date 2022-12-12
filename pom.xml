@@ -15,6 +15,7 @@
 	<description>demo-test-maison</description>
 	<properties>
 		<java.version>18</java.version>
+		<maven.compiler.version>3.8.1</maven.compiler.version>
 	</properties>
 	<dependencies>
 		<dependency>
