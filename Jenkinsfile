@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Source') {
             steps{
-                git branch: 'main', url: 'https://github.com/tonux/demo-test-sir.git'
+                git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
 
