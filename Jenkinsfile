@@ -3,26 +3,22 @@ pipeline{
     tools{
         maven '3.8.1'
     }
-
     stages{
         stage('Source') {
             steps{
                 git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
-
          stage('Clean package') {
                     steps{
                         sh 'mvn clean package'
                     }
                 }
-
         stage ('Build') {
             steps{
                 sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
             }
         }
-
         stage ('SonarQube Analysis') {
             steps{
                 sh 'mvn sonar:sonar'
