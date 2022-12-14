@@ -10,6 +10,16 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
+         stages {
+                stage('Clean') {
+                    steps {
+                        withMaven(maven: 'Default',jdk: 'Java 18') {
+                            sh "echo JAVA_HOME=$JAVA_HOME"
+                            sh "mvn clean"
+                        }
+                    }
+                }
+            }
          stage('Clean package') {
                     steps{
                         sh 'mvn clean package'
