@@ -11,7 +11,7 @@ pipeline{
             }
         }
          stages {
-                stage('Clean') {
+                stage('Testing maven') {
                     steps {
                         withMaven(maven: 'Default',jdk: 'Java 18') {
                             sh "echo JAVA_HOME=$JAVA_HOME"
