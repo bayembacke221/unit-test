@@ -1,5 +1,4 @@
 #Image de base
-FROM maven:3-jdk-18-alpine AS build
 FROM openjdk:18-alpine
 LABEL maintainer="sir@formation.com"
 VOLUME /main-app
