@@ -9,9 +9,9 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
-         stage('Clean package') {
+         stage('Test') {
                     steps{
-                        sh 'mvn clean package'
+                        sh 'mvn test'
                     }
                 }
         stage ('Build') {
