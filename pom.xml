@@ -73,7 +73,7 @@
 					http://localhost:9000
 				</sonar.host.url>
 				<sonar.login>admin</sonar.login>
-				<sonar.password>Bayembacke221</sonar.password>
+				<sonar.password>admin123</sonar.password>
 			</properties>
 		</profile>
 	</profiles>
