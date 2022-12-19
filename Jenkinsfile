@@ -11,17 +11,17 @@ pipeline{
         }
          stage('Test') {
                     steps{
-                        sh 'mvn test'
+                        bat 'mvn test'
                     }
                 }
         stage ('Build') {
             steps{
-                sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
+                bat 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
             }
         }
         stage ('SonarQube Analysis') {
             steps{
-                sh 'mvn sonar:sonar'
+                bat 'mvn sonar:sonar'
             }
         }
 
