@@ -33,7 +33,7 @@ pipeline{
         } // aborted
 
         failure {
-            echo "Sending message to Agent"
+            echo "Sending message to Agent developer"
         } // failure
 
         success {
