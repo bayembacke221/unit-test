@@ -1,6 +1,7 @@
 #Image de base
 FROM openjdk:17-alpine
 LABEL maintainer="sir@formation.com"
+RUN apk add --no-cache git
 VOLUME /main-app
 ADD target/demo-test-maison-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
