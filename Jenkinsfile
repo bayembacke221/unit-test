@@ -9,11 +9,6 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/bayembacke221/unit-test.git'
             }
         }
-         stage('Test') {
-                    steps{
-                        bat 'mvn test'
-                    }
-                }
         stage ('Build') {
             steps{
                 bat 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install'
